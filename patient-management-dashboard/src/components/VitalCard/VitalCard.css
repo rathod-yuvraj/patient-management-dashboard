@@ -1,0 +1,31 @@
+.vital-card {
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.vital-card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.vital-card h1 {
+  margin-top: 15px;
+  font-size: 32px;
+}
+
+.vital-card p {
+  color: gray;
+  margin-top: 10px;
+}
+
+.blue {
+  background: #e0f3fa;
+}
+
+.pink {
+  background: #ffe6eb;
+}
+
+.purple {
+  background: #ffe6f8;
+}

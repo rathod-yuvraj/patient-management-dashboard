@@ -1,0 +1,36 @@
+.patient-info-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.05);
+}
+.patient-profile{
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+}
+.info-row{
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:18px;
+}
+.show-btn{
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:30px;
+
+    background:#01F0D0;
+
+    font-weight:700;
+}
