@@ -1,11 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL:
-    "https://fedskillstest.coalitiontechnologies.workers.dev/",
-  auth: {
-    username: "coalition",
-    password: "skills-test",
+  baseURL: "https://fedskillstest.coalitiontechnologies.workers.dev/",
+  headers: {
+    Authorization: "Basic " + btoa("coalition:skills-test"),
   },
 });
 
@@ -15,9 +13,8 @@ export const getDashboardData = async () => {
 
     const patients = response.data;
 
-    const selectedPatient = patients.find(
-      (patient) => patient.name === "Jessica Taylor"
-    );
+    // default: first patient (better than hardcoding name)
+    const selectedPatient = patients?.[0] || null;
 
     return {
       patients,
@@ -26,8 +23,6 @@ export const getDashboardData = async () => {
   } catch (error) {
     console.error("API Error:", error);
 
-    throw new Error(
-      "Unable to load dashboard data."
-    );
+    throw new Error("Unable to load dashboard data.");
   }
 };
